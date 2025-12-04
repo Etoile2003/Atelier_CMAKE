@@ -109,7 +109,9 @@ jobs:
         run: |
           echo "### Résultat du test *car*" >> $GITHUB_STEP_SUMMARY
           echo '' >> $GITHUB_STEP_SUMMARY
-          echo '
+          echo '' >> $GITHUB_STEP_SUMMARY
+          cat build/report.txt >> $GITHUB_STEP_SUMMARY
+          echo '' >> $GITHUB_STEP_SUMMARY
 
   deployment:
     runs-on: ubuntu-latest
